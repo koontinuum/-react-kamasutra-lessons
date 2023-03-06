@@ -1,0 +1,52 @@
+.header {
+  width: 100%;
+}
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: start;
+}
+.searchmenu {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.searchmenu .input {
+  border: 2px solid orange;
+  border-radius: 5px;
+  outline: none;
+  height: 20px;
+  width: 50%;
+}
+.title {
+  width: 13ch;
+  overflow: hidden;
+  color: #fff;
+  font-size: 40px;
+  font-family: monospace;
+  white-space: nowrap;
+  border-right: 4px solid orange;
+  animation: printed-text 5s steps(13), flashin-border 0.75s step-start infinite;
+}
+
+@keyframes flashin-border {
+  0% {
+    border-color: orange;
+  }
+
+  50% {
+    border-color: transparent;
+  }
+
+  100% {
+    border-color: orange;
+  }
+}
+
+@keyframes printed-text {
+  from {
+    width: 0%;
+  }
+}
